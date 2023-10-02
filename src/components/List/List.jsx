@@ -11,8 +11,6 @@ import {
 
 import DetailsCard from "../DetailsCard/DetailsCard.jsx";
 
-// import useStyles from "./listStyles.js";
-
 const List = ({
   places,
   type,

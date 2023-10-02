@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Container, Typography } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
 import ControlledAccordions from "../components/AboutComponents/ControlledAccordions";

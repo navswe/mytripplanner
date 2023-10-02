@@ -20,5 +20,13 @@
       "item": "go to the rodeo",
       "id": 5
     }
+  ],
+
+  "users": [
+    {
+      "email": "admin",
+      "password": "password",
+      "id": 1
+    }
   ]
 }

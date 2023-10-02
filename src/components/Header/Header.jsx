@@ -65,7 +65,7 @@ const SearchIconWrapper = styled("div")(({ theme }) => ({
 }));
 
 //pages for various endpoints
-const pages = ["Home", "About", "Book Now!"];
+const pages = ["Home", "About", "Login"];
 
 // Header is a responsive navigation app bar with Autocomplete search feature using Google Places Autocomplete
 

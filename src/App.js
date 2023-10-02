@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import HeaderBar from "./components/Header/Header";
+import Landingpage from "./pages/Landingpage";
 
 
 const App = () => {
@@ -13,9 +14,11 @@ const App = () => {
       <BrowserRouter>
         <HeaderBar />
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<Landingpage />}></Route>
           <Route path="/Home" element={<Home />}></Route>
           <Route path="/About" element={<About />}></Route>
+          <Route path="/Login" element={<Landingpage />}></Route>
+
         </Routes>
       </BrowserRouter>
     </>

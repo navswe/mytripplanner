@@ -1,3 +1,10 @@
-.container {
-  width: 100vw;
+.wrapper {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  background-image: url("../photos/downtownhouston.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  
+
 }

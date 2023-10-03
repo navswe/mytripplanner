@@ -1,32 +1,36 @@
 {
   "lists": [
     {
-      "item": "hotel haha",
+      "item": "explore downtown Houston",
       "id": 1
     },
     {
-      "item": "NRG stadium",
+      "item": "visit downtown Aquarium",
       "id": 2
     },
     {
-      "item": "brunch?",
+      "item": "brunch: Texas style BBQ at the Pit Room",
       "id": 3
     },
     {
-      "item": "try vietjun crawfish boil",
+      "item": "visit Space Center Houston",
       "id": 4
     },
     {
-      "item": "go to the rodeo",
+      "item": "take pictures at the Menil Collection",
       "id": 5
     },
     {
-      "item": "tryt",
+      "item": "must try viet-cajun crawfish boil",
       "id": 6
     },
     {
-      "item": "fhyt",
+      "item": "discover Bellaire Asiatown",
       "id": 7
+    },
+    {
+      "item": "attend the Rodeo",
+      "id": 8
     }
   ],
   "users": [

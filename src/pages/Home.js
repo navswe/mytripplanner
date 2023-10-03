@@ -6,9 +6,6 @@ import { getPlacesData } from "../apis/api";
 import List from "../components/List/List";
 import Map from "../components/Map/Map";
 
-//tripplanner todo list OLD VERSION
-// import InputTodo from "../components/TodoTable/InputTodo";
-// import ListTodo from "../components/TodoTable/ListTodo";
 
 // tripplanner todo list JSON-SERVER version
 import TodoTableJson from "../components/TodoTableJson/TodoTableJson";

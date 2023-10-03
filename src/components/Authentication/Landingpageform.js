@@ -21,14 +21,13 @@ function Landingpageform() {
   return (
     <Grid
       container
-      spacing={0}
+      spacing={2}
       direction="column"
       alignItems="center"
       justifyContent="center"
-      // sx={{ minHeight: "80vh" }}
     >
-      <div className="form" style={{ padding: "10px", width: "350px" }}>
-        <Paper elevation={3} style={{ padding: "10px", paddingBottom: "50px" }}>
+      <div className="form" style={{ padding: "10px", width: "400px" }}>
+        <Paper elevation={10} style={{ padding: "10px", paddingBottom: "60px" }} sx={{borderRadius:"30px"}}>
           <div align="center">
             {checked ? (
               <Chip

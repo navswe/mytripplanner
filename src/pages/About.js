@@ -8,7 +8,7 @@ import ImageCollage from "../components/AboutComponents/ImageCollage";
 export default function About() {
   const [value, setValue] = React.useState(0);
   return (
-    <Container sx={{ width: 2000 }}>
+    <Container sx={{ width:1 }}>
       <Typography variant="h4" component="h1" marginTop={2} color="primary">
         ABOUT HOUSTON
       </Typography>

@@ -14,7 +14,7 @@ function TodoTableJson() {
   const defaultMaterialTheme = createTheme(
     {
       typography: {
-        fontSize:"10px"
+        fontSize:"10px",
       },
     }
   );
@@ -40,7 +40,7 @@ function TodoTableJson() {
     <div className="todotable" >
         <ThemeProvider theme={defaultMaterialTheme}>
           <MaterialTable
-            
+            title={'Planner'}
             columns={columns}
             data={data}
             options={{ actionsColumnIndex: -1, addRowPosition: "first" }}

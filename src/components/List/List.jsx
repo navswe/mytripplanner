@@ -31,7 +31,7 @@ const List = ({
   }, [places]);
 
   return (
-    <div sx={{ padding: "25px"}}>
+    <div sx={{ padding: "10px"}}>
       <Typography variant="h6">  </Typography>
       {isLoading ? (
         <div

@@ -9,6 +9,7 @@ import React from "react";
 import { useState } from "react";
 import Login from "./login";
 import Signup from "./signup";
+import { Grid } from "@mui/material";
 
 function Landingpageform() {
   const [checked, setChecked] = useState(true);
@@ -18,36 +19,44 @@ function Landingpageform() {
   };
 
   return (
-    <div className="form" style={{ padding: "10px", width: "350px" }}>
-      <Paper elevation={3} style={{ padding: "10px", paddingBottom: "50px" }}>
-        <div align="center">
-          {checked ? (
-            <Chip
-              icon={<LockIcon />}
-              label="Log In"
-              variant="outlined"
-              color="info"
-            />
-          ) : (
-            <Chip
-              icon={<FaceIcon />}
-              label="Sign Up"
-              variant="outlined"
-              color="info"
-            />
-          )}
-          <br />
+    <Grid
+      container
+      spacing={0}
+      direction="column"
+      alignItems="center"
+      justifyContent="center"
+      // sx={{ minHeight: "80vh" }}
+    >
+      <div className="form" style={{ padding: "10px", width: "350px" }}>
+        <Paper elevation={3} style={{ padding: "10px", paddingBottom: "50px" }}>
+          <div align="center">
+            {checked ? (
+              <Chip
+                icon={<LockIcon />}
+                label="Log In"
+                variant="outlined"
+                color="info"
+              />
+            ) : (
+              <Chip
+                icon={<FaceIcon />}
+                label="Sign Up"
+                variant="outlined"
+                color="info"
+              />
+            )}
+            <br />
 
-          <Switch
-            checked={checked}
-            onChange={handleChange}
-            inputProps={{ "aria-label": "controlled" }}
-          />
-        </div>
-
-        {checked ? <Login /> : <Signup />}
-      </Paper>
-    </div>
+            <Switch
+              checked={checked}
+              onChange={handleChange}
+              inputProps={{ "aria-label": "controlled" }}
+            />
+          </div>
+          {checked ? <Login /> : <Signup />}
+        </Paper>
+      </div>
+    </Grid>
   );
 }
 

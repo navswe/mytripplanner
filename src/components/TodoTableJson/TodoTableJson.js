@@ -2,13 +2,22 @@ import React, { useState, useEffect } from "react";
 import "./Table.css";
 import MaterialTable from "material-table";
 import { ThemeProvider, createTheme } from "@mui/material";
-import TableContainer from "@mui/material/TableContainer";
+import AddIcon from '@mui/icons-material/Add';
+
 import Paper from "@mui/material/Paper";
+
 
 function TodoTableJson() {
   const url = "http://localhost:4000/lists";
   const [data, setData] = useState([]);
-  const defaultMaterialTheme = createTheme();
+  
+  const defaultMaterialTheme = createTheme(
+    {
+      typography: {
+        fontSize:"10px"
+      },
+    }
+  );
 
   useEffect(() => {
     getLists();
@@ -28,12 +37,10 @@ function TodoTableJson() {
     },
   ];
   return (
-    <div className="Table-header">
-      <TableContainer component={Paper}>
+    <div className="todotable" >
         <ThemeProvider theme={defaultMaterialTheme}>
-          {/* <h6 align="center">Trip Planner</h6> */}
           <MaterialTable
-            title="Trip Planner"
+            
             columns={columns}
             data={data}
             options={{ actionsColumnIndex: -1, addRowPosition: "first" }}
@@ -88,7 +95,6 @@ function TodoTableJson() {
             }}
           />
         </ThemeProvider>
-      </TableContainer>
     </div>
   );
 }

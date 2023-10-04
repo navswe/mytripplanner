@@ -11,10 +11,10 @@ const Map = ({ coords, places, setCoords, setBounds, setChildClicked }) => {
   const matches = useMediaQuery("(min-width:600px)");
 
   const defaultProps = {
-    // Hoston NRG stadium coordinates
+    // Hoston downtown
     center: {
       lat: 29.6847,
-      lng: -95.410707,
+      lng: -95.3573,
     },
     zoom: 11,
   };
@@ -24,11 +24,11 @@ const Map = ({ coords, places, setCoords, setBounds, setChildClicked }) => {
     <div className="mapwrapper" style={{ height: "85vh", width: "100%" }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAP_API_KEY }}
-        // defaultCenter={coords}
-        defaultCenter={defaultProps.center}
+        defaultCenter={coords}
+        // defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
-        center={coords}
-        // center={defaultProps.center}
+        // center={coords}
+        center={defaultProps.center}
         margin={[50, 50, 50, 50]}
         options={{
           disableDefaultUI: true,
@@ -45,7 +45,7 @@ const Map = ({ coords, places, setCoords, setBounds, setChildClicked }) => {
           places.map((place, i) => (
             <div
               //marker container
-              sx={{
+              style={{
                 position: "absolute",
                 transform: "translate(-50%, -50%)",
                 zIndex: 1,

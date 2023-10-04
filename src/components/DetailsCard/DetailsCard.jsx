@@ -18,7 +18,7 @@ const DetailsCard = ({ place, selected, refProp }) => {
     refProp?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   return (
-    <Card elevation={6}>
+    <Card elevation={6} >
       <CardMedia
         style={{ height: 200 }}
         image={

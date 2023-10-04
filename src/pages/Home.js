@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect } from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
@@ -65,7 +65,7 @@ const Home = () => {
       <CssBaseline />
       <Box>
         {/* //large container grid for 3 sections */}
-        <Grid container spacing={2} style={{ width: "100%" }}>
+        <Grid container spacing={2} sx={{ mt:2}} style={{ width: "100%" }}>
           {/* // 1st grid: todo list */}
           <Grid item xs={3} md={3}>
             {/* <InputTodo />

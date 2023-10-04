@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { Autocomplete } from "@react-google-maps/api";
+
 import {
   AppBar,
   Box,
@@ -40,13 +41,13 @@ const Search = styled("div")(({ theme }) => ({
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "inherit",
   "& .MuiInputBase-input": {
-    padding: theme.spacing(1, 10, 1, 0),
+    padding: theme.spacing(1, 5, 1, 0),
     // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("sm")]: {
-      width: "12ch",
+      width: "20ch",
       "&:focus": {
         width: "20ch",
       },
@@ -69,6 +70,8 @@ const pages = ["Home", "About", "Login"];
 
 // Header is a responsive navigation app bar with Autocomplete search feature using Google Places Autocomplete
 
+
+
 const HeaderBar = ({ onPlaceChanged, onLoad }) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
@@ -80,10 +83,12 @@ const HeaderBar = ({ onPlaceChanged, onLoad }) => {
     setAnchorElNav(null);
   };
 
+
+  
   return (
-    <AppBar position="static" sx={{ mb: 3 }} >
-      <Container maxWidth="xl" >
-        <Toolbar disableGutters>
+    <AppBar position="static" sx={{ mb: 0 }}>
+      <Container maxWidth="xl">
+        <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
           <RocketLaunchIcon
             sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
           />
@@ -100,11 +105,11 @@ const HeaderBar = ({ onPlaceChanged, onLoad }) => {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
+              fontSize: 20,
             }}
           >
             TRIP PLANNER
           </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -136,7 +141,7 @@ const HeaderBar = ({ onPlaceChanged, onLoad }) => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">
+                  <Typography textAlign="center" sx={{ fontSize: 20 }}>
                     <Link
                       style={{ textDecoration: "none", color: "white" }}
                       to={`/${page}`}
@@ -182,7 +187,7 @@ const HeaderBar = ({ onPlaceChanged, onLoad }) => {
               </Button>
             ))}
           </Box>
-          {/* Search Box using Google Places Autocomplete */}
+
           <Box display="flex">
             <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
               <Search>
@@ -196,7 +201,6 @@ const HeaderBar = ({ onPlaceChanged, onLoad }) => {
               </Search>
             </Autocomplete>
           </Box>
-          ;
         </Toolbar>
       </Container>
     </AppBar>

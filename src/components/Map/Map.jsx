@@ -5,7 +5,7 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import Rating from "@mui/material/Rating";
 import mapTheme from "./mapTheme.js";
 import "./mapstyling.css";
-import { blue } from "@mui/material/colors";
+
 
 const Map = ({ coords, places, setCoords, setBounds, setChildClicked }) => {
   const matches = useMediaQuery("(min-width:600px)");
@@ -27,7 +27,7 @@ const Map = ({ coords, places, setCoords, setBounds, setChildClicked }) => {
         // defaultCenter={coords}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
-        // center={coords}
+        center={coords}
         // center={defaultProps.center}
         margin={[50, 50, 50, 50]}
         options={{
